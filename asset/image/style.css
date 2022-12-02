@@ -1,0 +1,10 @@
+* {
+        margin: 0;
+    }
+
+#header {
+    background-image: url('./asset/images/template1.jpg');
+}
+p {
+	color:red;
+}
