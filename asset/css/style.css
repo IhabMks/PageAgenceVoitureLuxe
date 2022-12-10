@@ -3,10 +3,48 @@
 	margin: 0;
 	font-family: 'Maven Pro', sans-serif;
 }
+section {
+	margin-bottom: 4rem;
+}
 
+
+.btn{
+	display: inline-block;
+	background: rgb(14, 14, 14);
+	color: rgb(255, 255, 255);
+	border: 1px solid transparent;
+	padding: 0 22px;
+    text-transform: uppercase;
+	font-weight: 500;
+    font-size: 12px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.1s all linear;
+    /*box-shadow: 0px 0px 0px 1px white inset;    Proposition*/
+}
+.btn:hover{
+	background-color: #484848;
+}
 
 /*===============================Header===============================*/
 
+
+#mask{
+	position: absolute;
+	/*display: none;*/
+	visibility: hidden;
+	height: 100vh;
+	width: 100%;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s linear;
+}
+
+.show{
+	visibility: visible!important;
+  opacity: 1!important;
+  transition: opacity 0.3s, visibility 0.3s linear!important;
+}
 
 #header {
     background-image: url("../image/sujet2_template_image0.jpg");
@@ -14,6 +52,11 @@
     background-size: 100% 100%;
     height: 100vh;
     margin-bottom: 4rem;
+}
+
+#logo	{
+	width: 75px;
+	height: 75px;
 }
 /*
 https://codepen.io/MattgyverTV/pen/LRmero
@@ -70,24 +113,7 @@ https://codepen.io/MattgyverTV/pen/LRmero
 .nav-bar a:hover {
   transform: translateY(5px);
 }
-
-/*.nav-bar li {
-  float: left;
-}
-
-.nav-bar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: .5s;
-}
-
-.nav-bar li a:hover {
-  transform: translateY(5px);
-}*/
-#header-titre{
+#heading{
 	position: absolute;
 	margin: 11rem 0 0 4rem;
 	color: whitesmoke;
@@ -95,54 +121,54 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	font-weight: 700;
 	text-shadow: black 0.1em 0.1em 0.2em;
 }
-#header-titre p{
+#heading p{
 	font-size: 15px;
 }
-#header-titre h1{
+#heading h1{
 	font-size: 5rem;
-	max-width: 7em;
+/*	max-width: 7em;*/
 	overflow: hidden;
 }
 
 
 
 /*===============================service_Section===============================*/
-#service, #service p {
+#container-1, #container-1 p {
 	font-weight: 600;
 	color: gray;
 	font-size: 16px;
 }
-.upper{
+.c1-a{
 	height: 70vh;
 	padding: 0 4rem;
 	margin-bottom: 2rem;
 }
-.upper:after {
+.c1-a:after {
   content: "";
   display: table;
   clear: both;
 }
-.lower{
+.c1-b{
 	height: 30vh;
 	padding: 0 4rem;
     margin-bottom: 2rem;
 }
-.upper .left{
+.c1-a-left{
 	float: left;
 	width: 70%;
 	height: 100%;
 	background-image: linear-gradient(90deg, black 55%, white 45%);
 }
-.upper .right{
+.c1-a-right{
 	float: left;
 	width: 30%;
 	height: 100%;
 	padding-top: 7rem;
 }
-.upper .right > * , .lower .left > *{
+.c1-a-right > * , .c1-b-left > *{
 	margin-bottom: 1.5rem;
 }
-.upper .right h2{
+.c1-a-right h2{
 	font-size: 30px;
 	color: rgb(70,70,70);
 	text-transform: capitalize;
@@ -150,7 +176,7 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	margin-bottom: 1.1rem;
 	text-shadow: black 0 0 1px;
 }
-.upper .right h3{
+.c1-a-right h3{
 	color: rgb(0, 0, 0);
 	text-transform: uppercase;
 	font-size: 22px;
@@ -158,55 +184,38 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	letter-spacing: 0.8px;
 	text-shadow: black 0 0 2px;
 }
-.upper img{
+.c1-a img{
 	padding: 3rem;
 	width: 100%;
 	height: 100%;
 }
-.upper .right hr {
+.c1-a-right hr {
 	width: 17%;
 	border:none;
   	border-top:0.6rem black solid;
 }
-.service-button{
-	display: inline-block;
-	background: rgb(14, 14, 14);
-	color: rgb(255, 255, 255);
-	border: 1px solid transparent;
-	padding: 0 22px;
-    text-transform: uppercase;
-	font-weight: 500;
-    font-size: 12px;
-    line-height: 40px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.1s all linear;
-    /*box-shadow: 0px 0px 0px 1px white inset;    Proposition*/
-}
-.service-button:hover{
-	background-color: #484848;
-}
-.lower .left{
+
+.c1-b-left{
 	float: left;
 	width: 39%;
 	height: 100%;
 	padding: 3rem 0 0 2.5rem;
 }
 
-.lower .left h3{
+.c1-b-left h3{
 	text-transform: uppercase;
 	font-size: 18px;
 	color: rgb(55,55,55);
 	font-weight: 500;
 	text-shadow: black 0 0 2px;
 }
-.lower .right{
+.c1-b-right{
 	float: left;
 	width: 61%;
 	height: 100%;
 	padding: 4rem 0 0 1rem;
 }
-.lower .right div {
+.c1-b-right div {
 	float: left;
 	width: 33.33%;
 	display: grid;
@@ -215,7 +224,79 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	text-shadow: black 0 0 1px;
 	font-weight: 500;
 }
-.lower .right .icon {
+.c1-b-right .icon {
 	font-size: 50px;
 	margin: 0 0 1rem 0.5rem;
+}
+
+/*===============================service_Section===============================*/
+#container-2 {
+	background: rgb(0 0 0);
+	padding: 3rem;
+}
+#container-2 .c2-a{
+	height: 48rem;
+	background: red;
+	opacity: .7;
+}
+
+#container-2 .lower{
+	height: 15rem;
+	background: green;
+	opacity: .7;
+}
+#container-2 .c2-a, #container-2 .lower{
+	margin-bottom: 3rem;
+}
+#container-2 .c2-a .c2-a-left{
+	display: grid;
+	row-gap: 2rem;
+	float: left;
+	width: 40%;
+	height: 100%;
+	background: yellow;
+	opacity: 0.4;
+}
+#container-2 .c2-a .right{
+	float: left;
+	width: 60%;
+	height: 100%;
+	background: blue;
+	opacity: 0.4;
+}
+#container-2 .c2-a .c2-a-left .c2-a-left-row1{
+	height: 25rem;
+	background: hotpink;
+	margin: 3rem 3rem 0 4rem;
+}
+#container-2 .c2-a .c2-a-left .c2-a-left-row2{
+	background: blue;
+	margin-left: 2rem;
+}
+#container-2 .c2-a .c2-a-left img{
+	height: 25rem;
+	width: 26rem;
+	position: absolute;
+}
+
+#container-2 .c2-a .c2-a-left .c2-a-left-row2 > *{
+	margin-bottom: 1.5rem;
+}
+.btn-c2{
+	background: hotpink;
+}
+.btc-c2:hover{
+	background-color: #484848;
+}
+#container-2 .c2-a .c2-a-left .c2-a-left-row2 h3{
+	text-transform: uppercase;
+	font-size: 18px;
+	color: rgb(255,255,255);
+	font-weight: 500;
+	text-shadow: white 0 0 2px;
+  }
+#container-2 .c2-a .c2-a-left .c2-a-left-row2 p{
+	font-weight: 600;
+	color: rgb(220,220,220);
+	font-size: 16px;
 }
