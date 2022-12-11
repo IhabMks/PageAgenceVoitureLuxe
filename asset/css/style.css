@@ -29,23 +29,6 @@ section {
 
 /*===============================Header===============================*/
 
-
-#mask{
-	position: absolute;
-	/*display: none;*/
-	visibility: hidden;
-	height: 100vh;
-	width: 100%;
-	opacity: 0;
-	transition: visibility 0s, opacity 0.3s linear;
-}
-
-.show{
-	visibility: visible!important;
-  opacity: 1!important;
-  transition: opacity 0.3s, visibility 0.3s linear!important;
-}
-
 #header {
     background-image: url("../image/sujet2_template_image0.jpg");
     background-repeat: no-repeat;
@@ -132,7 +115,7 @@ https://codepen.io/MattgyverTV/pen/LRmero
 
 
 
-/*===============================service_Section===============================*/
+/*===============================Container1===============================*/
 #container-1, #container-1 p {
 	font-weight: 600;
 	color: gray;
@@ -194,6 +177,9 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	border:none;
   	border-top:0.6rem black solid;
 }
+.c1-a-right p{
+	width: 80%;
+}
 
 .c1-b-left{
 	float: left;
@@ -229,8 +215,8 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	margin: 0 0 1rem 0.5rem;
 }
 
-/*===============================service_Section===============================*/
-#container-2 {
+/*===============================Container2===============================*/
+/*#container-2 {
 	background: rgb(0 0 0);
 	padding: 3rem;
 }
@@ -299,4 +285,374 @@ https://codepen.io/MattgyverTV/pen/LRmero
 	font-weight: 600;
 	color: rgb(220,220,220);
 	font-size: 16px;
+}*/
+
+#container-2 {
+    background-color: black;
+    width: 100%;
+}
+
+.c2-a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 800px;
+}
+
+.c2-a-left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.c2-a-left-row1{
+    height: 60%; 
+    position: relative;
+}
+
+.c2-a-left-row1-img{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 90%;
+    width: 85%;
+    z-index: 1;
+}
+
+.c2-a-left-row1-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c2-a-left-row1-a {
+    float: right;
+    position: absolute;
+    background-color: rgb(222, 80, 80);
+	width: 85%;
+	height: 90%;
+    right: 0px; 
+    bottom: 0px;
+    z-index: 0;
+}
+
+.c2-a-left-row2{
+    height: 40%;
+    padding: 0px 30px 0px 30px;
+    width: 100%;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.c2-a-right{
+    width: 57%;
+}
+
+.c2-a-right div{
+    height: 45%;
+    padding: 20px;
+    overflow-wrap: break-word;
+}
+
+.c2-a-right div h2{
+    color: rgb(222, 80, 80);
+}
+
+.c2-a-right-img{
+    position: relative;
+    overflow: hidden;
+    height: 55%;
+}
+
+.c2-a-right img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c2-b{
+    display: flex;
+    justify-content: space-between;
+}
+
+.c2-b-img{
+    width: 65%;
+    /* padding: 30px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.c2-b-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c2-b-right{
+    width: 35%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.c2-b-right h2, .c2-b-right .btn{
+    float: right;
+    text-align: right;
+}
+
+.btn-c2, button{
+    background-color: rgb(222, 80, 80);
+}
+
+
+
+/*===============================Container3===============================*/
+#container-3{
+    width: 100%;
+    height: 600px;
+}
+
+.c3-a{
+    width: 100%;
+    height: 50%;
+}
+
+.c3-a h2{
+    color: rgb(222, 80, 80);
+    text-align: center;
+}
+
+.c3-a ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80%;
+    color: black;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.c3-a ul li{
+    width: 18%;  
+}
+
+.c3-a-img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.c3-a-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.c3-a ul li p{
+    width: 100%;
+    margin: 0px;
+    padding-top: 20px;
+    height: 20%;
+    overflow-wrap: break-word;
+}
+
+.c3-b{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.c3-b-img{
+    overflow: hidden;
+    width: 45%;
+    position: relative;
+}
+
+.c3-b-img img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c3-b-right{
+    width: 45%;
+    overflow: hidden;
+}
+
+.c3-b-right h2{
+    color: rgb(222, 80, 80);
+}
+
+.c3-b-right p{
+    color: black;
+    overflow-wrap: break-word;
+}
+
+
+/*===============================Container4===============================*/
+
+#container-4{
+    width: 100%;
+    height: 600px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.c4-img{
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.c4-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.c4-a{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.c4-a-img{
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.c4-a-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c4-a-txt{
+    height: 50%;
+    background-color: rgb(222, 80, 80);
+    padding: 40px;
+    overflow-wrap: break-word;
+}
+
+.c4-b{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+} 
+
+.c4-b-img{
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+}
+
+.c4-b-img img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c4-b-txt{
+    height: 50%;
+}
+
+.c4-b-txt h2{
+    color: #484848;
+    padding: 40px;
+}
+
+.c4-b-txt .btn{
+    margin-left: 40px;
+}
+
+
+
+/*===============================footer===============================*/
+
+footer{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.f-a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80%;
+    color: #484848;
+    padding: 30px;
+}
+
+.f-a-left{
+    width: 45%;
+}
+
+.f-a-left-bottom ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.f-a-left-bottom ul li{
+    width: 15%;
+    padding-right: 5px;
+}
+
+.f-a-left-bottom ul li img{
+    height: 30px;
+}
+
+.f-a form{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input, textarea {  
+    border  : none;
+    min-height: 30px;
+    margin  : 0;
+    width   : 100%;
+    background: #eae7e7;;
+}
+
+textarea{
+    min-height: 60px;
+}
+.f-b{
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    height: 20%;
+    padding: 10px;
 }
