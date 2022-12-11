@@ -150,7 +150,7 @@ function regleAlerte(titre){
 }
 var bField = document.getElementById("bField");
 bField.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
+    if (event.key == "Enter") {
         jouer();
     }
 });
