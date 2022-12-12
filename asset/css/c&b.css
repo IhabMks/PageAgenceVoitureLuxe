@@ -600,7 +600,7 @@ input:focus {
 }
 
 @media only screen and (max-height: 650px) {
-  #menuContainer{padding: 0;}#menuContainer h1{margin-bottom: 0}
+  #menuContainer{padding: 0;}#menuContainer h1{margin-bottom: 0}#dialogbox{width: auto;margin: 18px!important}
 }
 @media only screen and (max-height: 520px) {
   #menuContainer menu {width: auto;}#menuContainer{padding: 5%}

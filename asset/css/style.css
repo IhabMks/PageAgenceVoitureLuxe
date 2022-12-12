@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Maven Pro', sans-serif;
+    transition: 1s;
 }
 
 .btn{
@@ -23,8 +24,8 @@
 }
 section {
     margin-bottom: 4rem;
+    padding: 30px;
 }
-
 /*===============================Header===============================*/
 
 header {
@@ -43,24 +44,25 @@ header {
 
 #logo {
     width: 60px;
-    border: 2px double white;
-    border-radius: 30%;
+    margin-left: 2em;
+    transition: 1s;
 }
 
 #heading  {
     position: absolute;
-    margin: 5rem 0 0 4rem;
+    margin: 2rem 0 0 4rem;
     color: whitesmoke;
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: black 0.1em 0.1em 0.2em;
+    transition: 1s;
 }
 
 #heading p {
     font-size: 15px;
 }
 #heading h1{
-    font-size: 5rem;
+    font-size: 4.5rem;
     overflow: hidden;
 }
 
@@ -69,24 +71,45 @@ a {
     text-decoration: none;
 }
 
-nav a {
-    color: white;
-  padding: .7rem 1rem;
-  text-decoration: none;
-  float: right;
-  transition: .5s;
+.button {
+    display: inline-block;
+    color: #ffff!important;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }
-
-nav a:hover {
-    transform: translateY(5px);
+.button span {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-shadow: white 0 0 1px;
+}
+.button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /*===============================Main===============================*/
 /*===============================container-1===============================*/
 
-section {
-    padding: 30px;
-}
  
 #container-1, #container-1 p {
     font-weight: 600;
@@ -99,6 +122,7 @@ section {
 }
 .c1-a-right > *, .c1-b-left > *{
     margin-bottom: 1.5rem;
+    transition: 1s;
 }
 .c1-a-left {
     float: left;
@@ -112,6 +136,7 @@ section {
 	width: 20%;
 	height: 100%;
 	padding-top: 7rem;
+    transition: 1s;
 }
 
 .c1-a-right h2 {
@@ -331,6 +356,7 @@ section {
     overflow-wrap: break-word;
     overflow: hidden;
     align-self: center;
+    margin-right: 2em;
 }
 .c2-b-right h2{
     margin-bottom: 1em;
@@ -420,6 +446,7 @@ section {
 .c3-b-right{
     width: 45%;
     padding-top: 2em;
+    overflow: hidden;
 }
 .c3-b-right > *{
     margin-bottom: 2em;
@@ -596,10 +623,12 @@ input, textarea {
     margin  : 0;
     width   : 100%;
     background: #eae7e7;;
+    padding-left: 7px;
 }
 
 textarea{
     min-height: 7em;
+    padding-top: 7px;
 }
 
 .f-b{
@@ -639,4 +668,89 @@ textarea{
 
 .fa:hover {
     opacity: 0.7;
+}
+/*===============================animation===============================*/
+
+#heading:hover{
+    transform: translateX(50px);
+}
+#logo:hover, .c1-a-right:hover, .c1-b-left:hover, .c2-a-left-row2:hover,
+.c2-a-right-upper:hover, .c3-b-right:hover, .f-a-left:hover > *{
+    transform: translateX(10px);
+}
+.c1-a-left:hover >img{
+    filter: drop-shadow(0px 0px 10px black);
+    transform: translateX(10px);  
+}
+.c1-a-right:hover > hr{
+    width: 100%;
+}
+.c1-b-right > li i:hover{
+    transform: scale(1.2);
+}
+.c2-b-img:hover{
+  transform: translateX(40px);  
+}
+.c2-a-right-img:hover{
+    filter: drop-shadow(0px 0px 10px red);
+    transform: translateY(-10px); 
+}
+.c2-b-right:hover{
+    margin-right: 4em;
+}
+.c2-a-left-row1:hover > .c2-a-left-row1-img{
+    filter: drop-shadow(0px 0px 10px black);
+    transform: translate(10px,10px);  
+}
+.c3-a-img:hover{
+    filter: drop-shadow(0px 0px 5px black);
+    transform: scale(1.1);
+}
+.c3-b-img:hover{
+    filter: drop-shadow(0px 0px 10px black);
+    transform: translateX(10px);
+}
+.icons li:hover{
+    transform: rotate(360deg);
+}
+.f-b:hover > p a{
+    font-size: calc(1em + 5px);
+}
+
+/*===============================ButtonTop===============================*/
+#backTop {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backTop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#backTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#backTop:active {
+  background-color: #555;
+}
+.show {
+  opacity: 1!important;
+  visibility: visible!important;
 }
